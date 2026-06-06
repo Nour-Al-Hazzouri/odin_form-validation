@@ -1,9 +1,27 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100dvw;
-    height: 100dvh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 80%;
+  gap: 0.5rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
 }
