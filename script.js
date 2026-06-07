@@ -67,6 +67,10 @@ function passwordValidity() {
   const passwordOneValidity = passwordOne.validity;
   const passwordTwoValidity = passwordTwo.validity;
   if (!passwordOne.checkValidity() || !passwordTwo.checkValidity()) {
+    passwordOne.classList.remove('password-valid');
+    passwordTwo.classList.remove('password-valid');
+    passwordOne.classList.add('password-invalid');
+    passwordTwo.classList.add('password-invalid');
     passwordPass = false;
     if (passwordOneValidity.tooShort || passwordTwoValidity.tooShort) {
       passwordError.textContent = "Password must be at least 8 characters";
@@ -80,6 +84,10 @@ function passwordValidity() {
       passwordError.textContent = "Passwords cannot be empty";
     }
   } else {
+    passwordOne.classList.remove('password-invalid');
+    passwordTwo.classList.remove('password-invalid');
+    passwordOne.classList.add('password-valid');
+    passwordTwo.classList.add('password-valid');
     passwordError.textContent = "";
     passwordPass = true;
   }

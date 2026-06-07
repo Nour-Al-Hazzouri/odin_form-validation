@@ -25,3 +25,23 @@ form div {
   align-items: center;
   gap: 0.2rem;
 }
+
+.input-field:user-valid {
+  border: 1px green solid;
+}
+
+.input-field:user-invalid {
+  border: 1px red solid;
+}
+
+.password-invalid {
+  border: red 1px solid;
+}
+
+.password-valid {
+  border: green 1px solid;
+}
+
+span {
+  color: red;;
+}
