@@ -69,7 +69,7 @@ function passwordValidity() {
   if (!passwordOne.checkValidity() || !passwordTwo.checkValidity()) {
     passwordPass = false;
     if (passwordOneValidity.tooShort || passwordTwoValidity.tooShort) {
-        passwordError.textContent = "Password must be at least 8 characters";
+      passwordError.textContent = "Password must be at least 8 characters";
     }
     if (passwordOne.value !== passwordTwo.value) {
       passwordError.textContent = "Passwords do not match";
@@ -85,11 +85,11 @@ function passwordValidity() {
   }
 }
 
-email.addEventListener("input", validateEmail);
-country.addEventListener("input", validateCountry);
-postalCode.addEventListener("input", postalCodeValidity);
-passwordOne.addEventListener("input", passwordValidity);
-passwordTwo.addEventListener("input", passwordValidity);
+email.addEventListener("blur", validateEmail);
+country.addEventListener("blur", validateCountry);
+postalCode.addEventListener("blur", postalCodeValidity);
+passwordOne.addEventListener("blur", passwordValidity);
+passwordTwo.addEventListener("blur", passwordValidity);
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!emailPass || !countryPass || !postalCodePass || !passwordPass) {
